@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HeroApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="71N-yh-LAP">
+                                <rect key="frame" x="0.0" y="97" width="375" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="5zl-4y-LyT"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="gAD-9g-SNc">
+                                    <size key="itemSize" width="180" height="180"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="taB-If-WsP">
+                                <rect key="frame" x="0.0" y="282" width="375" height="385"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="Hx6-eU-l07">
+                                <rect key="frame" x="20" y="37" width="254" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UuX-OE-2MJ">
+                                <rect key="frame" x="282" y="36" width="48" height="30"/>
+                                <state key="normal" title="Buscar"/>
+                                <connections>
+                                    <action selector="buscarHeroeApi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hq3-RL-uO5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="71N-yh-LAP" firstAttribute="top" secondItem="Hx6-eU-l07" secondAttribute="bottom" constant="26" id="8ej-e8-yrz"/>
+                            <constraint firstItem="71N-yh-LAP" firstAttribute="trailing" secondItem="taB-If-WsP" secondAttribute="trailing" id="JyE-Fu-85X"/>
+                            <constraint firstItem="taB-If-WsP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LHy-lY-Z1r"/>
+                            <constraint firstItem="Hx6-eU-l07" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="PO0-8Y-HMn"/>
+                            <constraint firstItem="UuX-OE-2MJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="SOU-6J-vLQ"/>
+                            <constraint firstAttribute="bottom" secondItem="taB-If-WsP" secondAttribute="bottom" id="THg-NJ-s5g"/>
+                            <constraint firstItem="71N-yh-LAP" firstAttribute="leading" secondItem="taB-If-WsP" secondAttribute="leading" id="XI0-BP-AW9"/>
+                            <constraint firstItem="taB-If-WsP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="g5K-hb-K8Z"/>
+                            <constraint firstItem="taB-If-WsP" firstAttribute="top" secondItem="71N-yh-LAP" secondAttribute="bottom" constant="-15" id="lBz-wt-0TC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UuX-OE-2MJ" secondAttribute="trailing" constant="45" id="mFO-ne-bWG"/>
+                            <constraint firstItem="Hx6-eU-l07" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="37" id="oF6-sd-jgk"/>
+                            <constraint firstItem="UuX-OE-2MJ" firstAttribute="leading" secondItem="Hx6-eU-l07" secondAttribute="trailing" constant="8" id="zOS-x3-bHJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnBuscar" destination="UuX-OE-2MJ" id="Xwx-UI-0nX"/>
+                        <outlet property="collectionView" destination="71N-yh-LAP" id="3u4-wc-e2F"/>
+                        <outlet property="datoBusqueda" destination="Hx6-eU-l07" id="Pcq-4K-nCP"/>
+                        <outlet property="tableView" destination="taB-If-WsP" id="TIt-dt-I44"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>

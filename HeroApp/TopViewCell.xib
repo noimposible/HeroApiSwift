@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" contentMode="center" reuseIdentifier="topCell" id="gTV-IL-0wX" customClass="TopViewCell" customModule="HeroApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bWl-16-oZN">
+                        <rect key="frame" x="-10" y="10" width="100" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="46o-s4-4h8"/>
+                            <constraint firstAttribute="width" constant="100" id="9aw-Q2-Zrr"/>
+                            <constraint firstAttribute="height" constant="100" id="P7O-xe-14C"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="hUN-n9-bE4"/>
+                            <constraint firstAttribute="width" secondItem="bWl-16-oZN" secondAttribute="height" multiplier="1:1" id="pUE-zb-kaG"/>
+                        </constraints>
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Whl-pF-Cgb">
+                        <rect key="frame" x="0.0" y="118" width="80" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Whl-pF-Cgb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="9dh-rf-kAe"/>
+                <constraint firstItem="bWl-16-oZN" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="RN0-u0-mft"/>
+                <constraint firstItem="bWl-16-oZN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="RYd-BH-YT9"/>
+                <constraint firstItem="bWl-16-oZN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="TTi-rt-NTe"/>
+                <constraint firstItem="bWl-16-oZN" firstAttribute="centerX" secondItem="Whl-pF-Cgb" secondAttribute="centerX" id="bGP-aJ-ETV"/>
+                <constraint firstItem="Whl-pF-Cgb" firstAttribute="top" secondItem="bWl-16-oZN" secondAttribute="bottom" constant="8" id="dfy-K9-SG7"/>
+                <constraint firstAttribute="trailing" secondItem="Whl-pF-Cgb" secondAttribute="trailing" id="z2d-G2-YNv"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="175" height="148"/>
+            <connections>
+                <outlet property="avatar" destination="bWl-16-oZN" id="z9U-f6-yCF"/>
+                <outlet property="name" destination="Whl-pF-Cgb" id="TaS-Y2-LOX"/>
+            </connections>
+            <point key="canvasLocation" x="91.304347826086968" y="15.401785714285714"/>
+        </collectionViewCell>
+    </objects>
+</document>
